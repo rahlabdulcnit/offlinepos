@@ -1,0 +1,119 @@
+<div class="pos-container-fluid">
+    <!-- Left Side: Item Grid and Search -->
+    <div class="pos-left-pane">
+        <div class="pane-header">
+
+            
+            <div class="pos-search-container">
+                <i class="fa fa-search"></i>
+                <input type="text" id="item-search-input" class="form-control" placeholder="Search by name or code...">
+            </div>
+            <select id="pos-profile-selector" class="form-control"></select>
+        </div>
+        <div id="item-grid" class="item-grid-container">
+            <!-- Items will be rendered here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Right Side: Cart and Checkout -->
+    <div class="pos-right-pane">
+
+        
+
+
+        <!-- Cart Items -->
+        <div class="cart-items-container">
+        <button id="close-shift-button" class="btn btn-danger align-items-end">Close Shift</button>
+
+            <div id="cart-items-list">
+
+                <div class="cart-empty-state">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>Your cart is empty</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checkout Area -->
+        <div class="checkout-area">
+            <!-- Totals -->
+            <div class="totals-summary">
+                <div class="summary-line"><span>Subtotal</span><span id="subtotal-value">0.00</span></div>
+                <div class="summary-line"><span>Tax</span><span id="tax-value">0.00</span></div>
+                <div class="summary-line grand-total"><span>Grand Total</span><span id="grand-total-value">0.00</span></div>
+            </div>
+
+            <!-- Payment Methods -->
+            <div class="payment-methods-container">
+                <h6>Payment</h6>
+                <div id="payment-lines"></div>
+                <button id="add-payment-btn" class="btn btn-sm btn-secondary"><i class="fa fa-plus"></i> Add Payment</button>
+            </div>
+
+            <!-- Final Balance -->
+            <div class="final-balance-summary">
+                <div class="summary-line"><span>Amount Paid</span><strong id="paid-amount-value" class="text-success">0.00</strong></div>
+                <div class="summary-line text-danger"><span>Amount Due</span><strong id="due-amount-value">0.00</strong></div>
+                <div class="summary-line"><span>Change</span><strong id="change-amount-value">0.00</strong></div>
+            </div>
+
+            <!-- Submit Button -->
+            <button id="submit-button" class="btn btn-success btn-lg btn-block">Submit</button>
+        </div>
+    </div>
+    <!-- modal -->
+   <div id="pos-shift-modal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content p-4">
+      <h4 class="modal-title mb-4">Open POS Shift</h4>
+
+      <div class="form-group">
+        <label for="shift-profile">POS Profile</label>
+        <select id="shift-profile" class="form-control"></select>
+      </div>
+
+      <div class="form-group">
+        <label for="shift-user">User</label>
+        <input id="shift-user" class="form-control" disabled>
+      </div>
+
+      <div class="form-group">
+        <label for="shift-opening">Opening Amount</label>
+        <input id="shift-opening" type="number" class="form-control" placeholder="Enter Opening Amount">
+      </div>
+
+      <div class="form-group mt-3">
+        <button id="shift-submit-btn" class="btn btn-primary">Start Shift</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+</div>
+
+<!-- Basic Styling -->
+<style>
+    .pos-container-fluid { display: flex; height: calc(100vh - 110px); background-color: #f1f5f9; gap: 15px; padding: 15px; }
+    .pos-left-pane { width: 60%; display: flex; flex-direction: column; }
+    .pos-right-pane { width: 40%; display: flex; flex-direction: column; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .pane-header { display: flex; gap: 15px; margin-bottom: 15px; }
+    .pos-search-container { position: relative; flex-grow: 1; }
+    .pos-search-container .fa-search { position: absolute; left: 12px; top: 11px; color: #999; }
+    #item-search-input { padding-left: 35px; }
+    #pos-profile-selector { width: 250px; }
+    .item-grid-container { flex-grow: 1; overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px;  }
+    .item-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 12px; cursor: pointer; text-align: center;height:150px }
+    .item-name { font-weight: 600; }
+    .item-price { color: #475569; }
+    .cart-items-container { flex-grow: 1; padding: 15px; overflow-y: auto; }
+    .cart-empty-state { text-align: center; color: #cbd5e1; padding: 50px 0; }
+    .cart-item { display: flex; align-items: center; padding: 10px 0; border-bottom: 1px solid #f1f5f9; }
+    .item-info { flex-grow: 1; }
+    .item-controls { display: flex; align-items: center; }
+    .checkout-area { padding: 15px; border-top: 1px solid #e2e8f0; }
+    .summary-line { display: flex; justify-content: space-between; margin-bottom: 8px; }
+    .grand-total { font-size: 1.5em; font-weight: bold; padding-top: 10px; border-top: 1px solid #e2e8f0; }
+    .payment-line { display: flex; gap: 10px; margin-bottom: 10px; }
+
+    
+</style>

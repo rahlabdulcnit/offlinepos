@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-19 10:11:28.463149",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_w4qp",
+  "mode_name",
+  "type"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_w4qp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "mode_name",
+   "fieldtype": "Data",
+   "label": "Mode Name "
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Cash\nCard"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-27 11:02:16.677959",
+ "modified_by": "Administrator",
+ "module": "Custom Pos",
+ "name": "Custom Mode Of Payment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "mode_name"
+}

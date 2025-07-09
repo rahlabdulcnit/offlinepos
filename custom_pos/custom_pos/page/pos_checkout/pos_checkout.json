@@ -1,0 +1,19 @@
+{
+ "content": null,
+ "creation": "2025-06-24 12:35:45.289209",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2025-06-24 12:42:44.659605",
+ "modified_by": "Administrator",
+ "module": "Custom Pos",
+ "name": "pos_checkout",
+ "owner": "Administrator",
+ "page_name": "pos_checkout",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "pos checkout page"
+}
